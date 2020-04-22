@@ -8,6 +8,7 @@ Open a terminal and run the command as administrator below in order to check you
 ```
 $ docker version
 ```
+Output:
 ```
 Client: Docker Engine - Community
  Version:           19.03.8
@@ -57,6 +58,7 @@ check container is running
 ```
 $ docker ps -a
 ```
+Output:
 ```
 CONTAINER ID     IMAGE     NAMES            COMMAND                  CREATED             STATUS              PORTS
 8df40720f193     mysql     my-own-mysql     "docker-entrypoint.s…"   3 seconds ago       Up 2 seconds        0.0.0.0:3306->3306/tcp, 33060/tcp 
@@ -66,6 +68,8 @@ If you didn't set password
 $ docker run --name [NAME] -p 3306:3306 -e MYSQL_ROOT_PASSWORD= -d mysql
 ```
 Container will be error
+
+Output:
 ```
 CONTAINER ID     IMAGE     NAMES            COMMAND                  CREATED             STATUS                        PORTS
 8df40720f193     mysql     my-own-mysql     "docker-entrypoint.s…"   10 seconds ago      Exited (1) 9 seconds ago 
@@ -87,6 +91,7 @@ check container is running
 ```
 $ docker ps -a
 ```
+Output:
 ```
 CONTAINER ID     IMAGE                   NAMES              COMMAND                  CREATED             STATUS              PORTS
 eab072242dbc     phpmyadmin/phpmyadmin   my-own-phpmyadmin  "/docker-entrypoint.…"   5 hours ago         Up 5 hours          0.0.0.0:8081->80/tcp 
@@ -111,6 +116,7 @@ Open a terminal and run the command as administrator
 ```
 $ docker exec -it [Container ID] bash
 ```
+Output:
 ```
 root@[Container ID]:/# _
 ```
@@ -137,14 +143,17 @@ mysql>
 ```
 $ CREATE USER '[username]'@'%' IDENTIFIED WITH mysql_native_password BY '[password]';
 ```
+Output:
 ```
 Query OK, 0 rows affected (0.02 sec)
 ```
 ```
 $ GRANT ALL ON [DB name].* TO '[username]'@'%' WITH GRANT OPTION;
 ```
+Output:
 ```
 Query OK, 0 rows affected (0.02 sec)
 ```
-- Access phpMyAdmin with new username and password
-- Try to connect mySQL with NodeJS or other language
+Access phpMyAdmin with new username and password
+
+Try to connect mySQL with NodeJS or other language
