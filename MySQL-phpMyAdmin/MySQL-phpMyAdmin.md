@@ -146,5 +146,5 @@ $ GRANT ALL ON [DB name].* TO '[username]'@'%' WITH GRANT OPTION;
 ```
 Query OK, 0 rows affected (0.02 sec)
 ```
-Access phpMyAdmin with new username and password
-Try to connect mySQL with NodeJS or other language
+- Access phpMyAdmin with new username and password
+- Try to connect mySQL with NodeJS or other language
