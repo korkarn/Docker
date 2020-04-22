@@ -63,7 +63,7 @@ CONTAINER ID     IMAGE     NAMES            COMMAND                  CREATED    
 ```
 If you didn't set password
 ```
-$ docker run --name [NAME] -p 3306:3306 -e MYSQL_ROOT_PASSWORD=[PASSWORD] -d mysql
+$ docker run --name [NAME] -p 3306:3306 -e MYSQL_ROOT_PASSWORD= -d mysql
 ```
 Container will be error
 ```
@@ -101,9 +101,9 @@ eab072242dbc     phpmyadmin/phpmyadmin   my-own-phpmyadmin  "/docker-entrypoint.
 1. create DB
 2. import button -> Go
 
-## Step 5: Set Authenticate fpr mySQL@8
+## Step 5: Set Authenticate for mySQL v.8
 
-NodeJS connect mySQL Problem  
+NodeJS connect to mySQL Problem  
 ```
 ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
 ```
@@ -147,3 +147,4 @@ $ GRANT ALL ON [DB name].* TO '[username]'@'%' WITH GRANT OPTION;
 Query OK, 0 rows affected (0.02 sec)
 ```
 Access phpMyAdmin with new username and password
+Try to connect mySQL with NodeJS or other language
